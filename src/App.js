@@ -1,13 +1,8 @@
 import './App.css';
-
-
 import TextForm from './components/TextForm';
-
 import Navbar from './components/Navbar';
 import React , {useState} from 'react';
 import Alert from './components/Alert';
-
-
 
 function App() {
 
@@ -56,13 +51,11 @@ const [alert, setAlert] = useState(null);
  <Alert alert = {alert} />
 
 <div className="container">
-     
-          
-        
-          <TextForm heading = "Enter your text" mode={mode} />
-          
-       
+    <TextForm heading = "Enter your text" mode={mode} /> 
 </div>
+
+
+
 
 </>
 

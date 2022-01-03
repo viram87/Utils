@@ -2,6 +2,7 @@
 import React, {useState}  from 'react'
 
 
+
 export default function about() {
 
     const [mode, setMode] = useState('light mode')
@@ -11,7 +12,7 @@ export default function about() {
 
         color: 'white',
         backgroundColor: '#1c1c1c',
-        border: "white solid 0.1px"
+        border: "white solid 0.1px" 
 
     })
 

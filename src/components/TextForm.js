@@ -36,22 +36,22 @@ export default function TextForm(props) {
         <div className='container mt-2' style={{color: props.mode === 'dark'?'white':'black' , fontFamily: 'Noto-sans'}}>
             <>
         
-            <div className="w-50">  
+            <div className="w-75">  
 
             <h1>{props.heading}</h1>    
 
             <textarea className="form-control" id="myBox"  onChange={handleonchange} style={{backgroundColor: props.mode === 'dark'?'#0C0404':'white' , color: props.mode === 'dark'?'white':'black' , fontSize: '20px'}}  rows="3" value={Text} placeholder='Insert text here'></textarea>
 
-            <button className="btn btn-primary mt-2" onClick={handleUPclick}>Convert to uppercase</button>
+            <button  disabled={Text.length===0}  className="btn btn-primary mt-2 mx-1 my-1" onClick={handleUPclick}>Convert to uppercase</button>
 
-            <button className="btn btn-primary mt-2 ms-2" onClick={handleLWclick}>Convert to lowercase</button>
+            <button  disabled={Text.length===0} className="btn btn-primary mt-2 ms-1 mx-1 my-1" onClick={handleLWclick}>Convert to lowercase</button>
 
-            <button className="btn btn-primary mt-2 ms-2 px-4" onClick={clear}>clear</button>
+            <button disabled={Text.length===0}  className="btn btn-primary mt-2 ms-1 px-4 mx-1 my-1" onClick={clear}>clear</button>
             </div>        
 
             <div>
             <h2 className="mt-3">Text summary</h2>
-            <p>{Text.split(" ").length} words and {Text.length} characters</p>
+            <p>{Text.split(" ").filter((element)=>{return element.length!==0}).length} words and {Text.length} characters</p>
             </div>
 
             <footer >
